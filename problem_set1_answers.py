@@ -1,3 +1,12 @@
+'''
+Problem Set 1 Answer Key
+Written by Adithya Solai
+
+Copyright © 2021 Adithya Solai. All rights are reserved.
+You cannot use, modify or redistribute this code without 
+explicit permission from Adithya Solai.
+'''
+
 ## Problem 1 ##
 # Find the remainder of 1234 / 10 and print it
 x = 1234
