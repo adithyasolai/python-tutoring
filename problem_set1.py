@@ -2,36 +2,60 @@
 # Find the remainder of 1234 / 10 and print it
 x = 1234
 
+# Expected Answer: 4
+
+#-----------------------------------------------------------------------
+
 ## Problem 2 ##
 # Find the remainder of 1234 / 100 and print it
 x = 1234
 
+# Expected Answer: 34
+
+#-----------------------------------------------------------------------
+
 ## Problem 3 ##
 # Find the remainder of 1234 / 1000 and print it
 x = 1234
+
+# Expected Answer: 234
+
+#-----------------------------------------------------------------------
 
 ## Problem 4 ##
 # Retrieve the number 3 using (/, //, or %), and print it
 # Number = 1234
 x = 1234
 
+# Expected Answer: 3
+
+#-----------------------------------------------------------------------
+
 ## Problem 5 ##
 # Write a floor function for integer division.
 # You can't use "//", which basically does this for you.
+# `number` and `divisor` will only be integers >= 1.
 def floor(number, divisor):
-    # `number` and `divisor` will only be integers >= 1.
     return None
 
-# Need Test Cases
+# Test Cases
+assert floor(7,2) == 3
+assert floor(18,3) == 6
+
+#-----------------------------------------------------------------------
 
 ## Problem 6 ##
 # Write a ceiling function for integer division.
 # You can't use "//", which would make this much easier.
-def ceiling(numer, divisor):
-    # `number` and `divisor` will only be integers >= 1.
+# `number` and `divisor` will only be integers >= 1.
+def ceiling(number, divisor):
     return None
 
-# Need Test Cases
+# Test Cases
+assert ceiling(7,2) == 4
+assert ceiling(18,3) == 6
+
+#-----------------------------------------------------------------------
 
 ## Problem 7 ##
 # Write a function that determines if an NBA player is eligible
@@ -48,7 +72,13 @@ def ceiling(numer, divisor):
 def basketballHOF(champ, pts, reb):
   return None
 
-# Need Test Cases
+# Test Cases
+assert basketballHOF(4, 4000, 2500) == True
+assert basketballHOF(3, 7000, 3000) == True
+assert basketballHOF(10, 20000, 10000) == True
+assert basketballHOF(0, 10000, 5000) == False
+
+#-----------------------------------------------------------------------
 
 ## Problem 8 ##
 # Write a function that returns the employee level of a given
@@ -68,18 +98,34 @@ def basketballHOF(champ, pts, reb):
 def sweLevel(yoe, pc):
   return None
 
-# Need Test Cases
+# Test Cases
+assert sweLevel(5, 100) == "SWE II"
+assert sweLevel(8, 150) == "SWE III"
+assert sweLevel(2, 20) == "SWE I"
+assert sweLevel(0, 0) == "SWE I"
+assert sweLevel(3, 50) == "SWE II"
+
+#-----------------------------------------------------------------------
 
 ## Problem 9 ##
 # Find and print the sum of the first 100 integers: 1 + 2 + 3 + ... + 100
 # (No function needed. Just write the code and print the final result.)
+
+# Expected Answer: 5050
+
+#-----------------------------------------------------------------------
 
 ## Problem 10 ##
 # Write a function that sums all of the EVEN numbers from 1 to some given number 'num'.
 def sumOnlyEvens(num):
   return 0
 
-# Need Test Cases
+# Test Cases
+assert sumOnlyEvens(100) == 2550
+assert sumOnlyEvens(3) == 2
+assert sumOnlyEvens(5000) == 6252500
+
+#-----------------------------------------------------------------------
 
 ## Problem 11 ##
 # Write a function that sums all EVENS and subtracts all ODDS from 1 to some number 'num'
@@ -88,14 +134,35 @@ def sumOnlyEvens(num):
 def sumEvensSubtractOdds(num):
   return 0
 
-# Need Test Cases
+# Test Cases
+assert sumEvensSubtractOdds(1) == -1
+assert sumEvensSubtractOdds(5) == -3
+assert sumEvensSubtractOdds(10) == 5
+assert sumEvensSubtractOdds(100) == 50
+assert sumEvensSubtractOdds(5000) == 2500
+
+#-----------------------------------------------------------------------
+#-----------------------------------------------------------------------
+
+print("All Normal Exercises Completed with all Test Cases passed!")
+
+#-----------------------------------------------------------------------
+#-----------------------------------------------------------------------
 
 ## Challenge 1 ##
 # Write a function that determines if an integer is prime.
 def isPrime(num):
   return 0
 
-# Need Test Cases
+# Test Cases
+assert isPrime(1) == False
+assert isPrime(2) == True
+assert isPrime(1667) == True
+assert isPrime(7841) == True
+assert isPrime(439482) == False
+assert isPrime(15) == False
+
+#-----------------------------------------------------------------------
 
 ## Challenge 2 ##
 # Write a function that returns the nth fibonacci number
@@ -104,4 +171,14 @@ def isPrime(num):
 def fibonacci(n):
   return 0
 
-# Need Test Cases
+# Test Cases
+assert fibonacci(1) == 1
+assert fibonacci(2) == 1
+assert fibonacci(3) == 2
+assert fibonacci(20) == 6765
+assert fibonacci(30) == 832040
+
+#-----------------------------------------------------------------------
+#-----------------------------------------------------------------------
+
+print("All Challenge Exercises Completed with all Test Cases passed!")
