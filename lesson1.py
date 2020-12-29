@@ -3,7 +3,7 @@ Lesson 1
 Written by Adithya Solai
 
 Copyright © 2021 Adithya Solai. All rights are reserved.
-You cannot use, modify or redistribute this code without 
+You cannot use, modify, or redistribute this code without 
 explicit permission from Adithya Solai.
 '''
 
@@ -148,15 +148,17 @@ def celsiusToFahren(c):
 # Write a function for the Weighted Average Cost of Capital
 # WACC = [% Equity * Cost of Equity ($)] + 
 #        [% Debt * Cost of Debt * (1- Corp. Tax %)]
-# pctEquity is % Equity, and it is a float between 0 and 1
-# cEquity is Cost of Equity, and it is any positive int
-# pctDebt is % Debt, and it is a float between 0 and 1
-# cDebt is Cost of Debt, and it is any positive int
-# corpTaxRate is Corp. Tax Rate, and it is a float between 0 and 1
+# `pctEquity` is % Equity, and it is a float between 0 and 1
+# `cEquity` is Cost of Equity, and it is any positive int
+# `pctDebt` is % Debt, and it is a float between 0 and 1
+# `cDebt` is Cost of Debt, and it is any positive int
+# `corpTaxRate` is Corp. Tax Rate, and it is a float between 0 and 1
 def WACC(pctEquity, cEquity, pctDebt, cDebt, corpTaxRate):
   return 0
 
 # Test Cases
+print(WACC(0.5, 500, 0.5, 500, 0.25)) # Should be 437.5
+print(WACC(0.9, 10000, 0.1, 5000, 0.2)) # Should be 9400
 
 # A Possible Answer
 def WACC(pctEquity, cEquity, pctDebt, cDebt, corpTaxRate):
@@ -242,10 +244,10 @@ def isOverValued(pe, market_cap):
     return False
 
 # Test Cases
-print(isOverValued(15, 15000)) # PE & Market Cap Conditions Met
-print(isOverValued(10, 15000)) # Only Market Cap Condition Met
-print(isOverValued(15, 10000)) # Only PE Ratio Condition Met
-print(isOverValued(3, 5000)) # No Conditions Met
+print(isOverValued(15, 15000)) # True. PE & Market Cap Conditions Met
+print(isOverValued(10, 15000)) # True. Only Market Cap Condition Met
+print(isOverValued(15, 10000)) # True. Only PE Ratio Condition Met
+print(isOverValued(3, 5000)) # False. No Conditions Met
 
 ############ Parentheses ############
 # Allows for more complex if-else conditionals
@@ -264,6 +266,7 @@ def loanEligible(downpayment, age, parent):
     return False
 
 # Need test cases
+
 
 ############ Exercise!! ############
 # Write a function to determine if someone should get a special
@@ -351,6 +354,8 @@ print(product)
 # Write a function that sums all of the numbers from 1 to some given number 'num'.
 def sumUpFromOne(num):
   return 0
+
+# Need Test Cases
 
 # A Possible Answer
 def sumUpFromOne(num):
