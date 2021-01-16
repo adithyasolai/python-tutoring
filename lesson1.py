@@ -166,7 +166,7 @@ def WACC(pctEquity, cEquity, pctDebt, cDebt, corpTaxRate):
 
 '''
 if, else-if, else statements
--Use if, else-if, and else statements to make the computer only do
+-Use if, elif, and else statements to make the computer only do
  something if some condition is met
 
 Tools needed for if, else-if, else conditionals:
@@ -266,6 +266,8 @@ def loanEligible(downpayment, age, parent):
     return False
 
 # Need test cases
+print(loanEligible(8000, 17, True)) # True
+print(loanEligible(8000, 17, False)) # False
 
 
 ############ Exercise!! ############
@@ -286,6 +288,7 @@ def specialCreditCard(member, networth, debt):
     return False
 
 # Need test cases
+print(specialCreditCard(False, 90000, 0)) # False
 
 ############ else-if ############
 # Allows for even more control of logical flow in code.

@@ -49,6 +49,8 @@ lst = [8, 0, -6, 79]
 # Retrieve the 3rd element in `lst`
 # A possible answer
 print(lst[2])
+# Another possible answer
+print(lst[-2])
 
 # Retrieve the last 3 elements in `lst`
 # A possible answer
@@ -195,6 +197,20 @@ for idx, val in enumerate(lst):
     print('curr value: ' + str(val))
     print()
 
+############ Exercise!! ############
+# Convert lst to a list of tuples, where each tuple's
+# first value is the index of the value in lst, and
+# the second value is the value itself.
+lst = [7, -3, 0, 100, 12]
+
+# Expected answer: [(0,7), (1,-3), (2,0), (3,100), (4,12)]
+
+# Possible answer:
+for idx, val in enumerate(lst):
+    lst[idx] = (idx, val)
+
+print(lst)
+
 '''
 Lists are heterogenous
 (They can contain more than one type of data)
@@ -212,6 +228,30 @@ for idx, val in enumerate(x):
     x[idx] = 999
 print(x)
 
+# Can check the type of an object/variable with isinstance()
+y = 5
+if isinstance(y, int):
+    print("True")
+else:
+    print("False")
+
+if isinstance(y, str):
+    print("True")
+else:
+    print("False")
+
+############ Exercise!! ############
+# Change every value in lst to the string "cat"
+# If the value was already a string, don't change it
+lst = ["asdf", 1, True, 7.7, "cat", ""]
+
+# Expected Answer: ["asdf", "cat", "cat", "cat", "cat", ""]
+
+# A possible answer
+for idx, val in enumerate(lst):
+    if isinstance(val, str) == False:
+        lst[idx] = "cat"
+print(lst)
 
 '''
 List Comprehensions
@@ -225,8 +265,8 @@ x = [10, 20, 30, 40, 50]
 
 # kind of bends our rule about not being able to modify
 # a list using a for-each approach
-x = [val * 10 for val in x]
-print(x)
+y = [val * 10 for val in x]
+print(y)
 
 # however, this is not an in-place operation
 # (since we have to do x= to actually reflect the change)
@@ -235,8 +275,43 @@ print(x)
 print(x)
 
 # an elegant way to generate lists!
-evens = [val for val in range(0, 101, 2)]
-odds = [val for val in range(1, 101, 2)]
+evens = [val for val in range(0, 11, 2)]
+odds = [val for val in range(1, 11, 2)]
 
 print(evens)
 print(odds)
+
+# Can also incorporate if-else with some awkward syntax
+is_even = [(val, True) if val % 2 == 0 else (val, False) for val in range(1,11,1)]
+print(is_even)
+
+# More elegant way to do this:
+is_even = [(val, val % 2 == 0) for val in range(1,11,1)]
+print(is_even)
+
+############ Exercise!! ############
+# Square every integer in lst using list comprehensions
+# if the integer is a prime number.
+# Otherwise, leave the integer as it is
+lst = [5099, 4621, 70, 4999, 7371]
+
+# Expected answer: [25999801, 21353641, 70, 24990001, 7371]
+
+# A possible answer
+def isPrime(num):
+  if num <= 1:
+    return False
+
+  num_factors = 0
+
+  for factor in range(1, num+1):
+    if num % factor == 0: 
+      num_factors += 1
+      
+  if num_factors == 2:
+    return True
+  else:
+    return False
+
+lst = [val ** 2 if isPrime(val) else val for val in lst]
+print(lst)
