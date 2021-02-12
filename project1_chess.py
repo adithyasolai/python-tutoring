@@ -33,6 +33,7 @@ What piece would you like to place, and where? --> STOP
 Thank you for playing!
 
 Some more notes:
+-You will always start off with an empty board every time the user starts your program.
 -As you can see above, you need to factor in the cases where white pieces and black pieces
  can capture each other. Pieces with the same color can't capture each other. This will impact
  how many moves a given piece on the board can make. On an empty board, the Black Rook at A1

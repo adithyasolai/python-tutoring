@@ -134,17 +134,17 @@ assert smallestElem([10]) == 10
 # You need to define the function yourself for this one.
 #######################################################
 def condense(lst):
-    condensed = []
+  condensed = []
 
-    for elem in lst:
-        if isinstance(elem, list):
-            # Concatenate other list on to `condensed`
-            condensed = condensed + elem
-        else:
-            # Just append the non-list element to `condensed`
-            condensed.append(elem)
+  for elem in lst:
+      if isinstance(elem, list):
+          # Concatenate other list on to `condensed`
+          condensed = condensed + elem
+      else:
+          # Just append the non-list element to `condensed`
+          condensed.append(elem)
 
-    return condensed
+  return condensed
 
 # Test Cases
 assert condense([[12,3], ["asdf"], [True, 7]]) == [12, 3, "asdf", True, 7]

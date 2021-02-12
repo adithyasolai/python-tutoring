@@ -16,15 +16,18 @@ data = [[  1,   7, 23,  43],
 
 # Write code here
 
+for row in data:
+  row.insert(2, 0)
+
 # Store your final 2-D list in `studentAnswer` for the assert below
-studentAnswer = None
+studentAnswer = data
 
 answer = [[  1,   7, 0, 23,  43],
           [ 90,  -6, 0, 23, -56],
           [-99, -73, 0, 69,  29],
           [100,  71, 0, 18,  88]]
 
-# assert studentAnswer == answer
+assert studentAnswer == answer
 
 #-----------------------------------------------------------------------
 
@@ -42,9 +45,20 @@ data = [[ 1,     7,   0,  23,  43],
         [ 77,   34, -43, -88,   0]]
 
 # Write code here
+for r in range(len(data)):
+  for c in range(len(data[r])):
+    if r == c:
+      # Main Diagonal
+      data[r][c] = 999
+    elif len(data[r]) - r - 1 == c:
+      # Minor Diagonal
+      data[r][c] = -999
+
+    if r == c and r == len(data) // 2 and c == len(data[r]) // 2:
+      data[r][c] = 1000
 
 # Store your final 2-D list in `studentAnswer` for the assert below
-studentAnswer = None
+studentAnswer = data
 
 answer = [[ 999,     7,    0,   23, -999],
           [  90,   999,    0, -999,  -56],
@@ -52,7 +66,7 @@ answer = [[ 999,     7,    0,   23, -999],
           [ 100,  -999,    0,  999,   88],
           [-999,    34,  -43,  -88,  999]]
 
-# assert studentAnswer == answer
+assert studentAnswer == answer
 
 #-----------------------------------------------------------------------
 
@@ -66,9 +80,16 @@ data = [[ 999,     7,    0,   23, -999],
         [-999,    34,  -43,  -88,  999]]
 
 # Write code here
+transposed = []
+
+for c in range(len(data[0])):
+  new_row = []
+  for r in range(len(data)):
+    new_row.append(data[r][c])
+  transposed.append(new_row)
 
 # Store your final 2-D list in `studentAnswer` for the assert below
-studentAnswer = None
+studentAnswer = transposed
 
 answer = [[ 999,    90,  -99,  100, -999],
           [   7,   999,  -73, -999,   34],
@@ -76,7 +97,7 @@ answer = [[ 999,    90,  -99,  100, -999],
           [  23,  -999,   69,  999,  -88],
           [-999,   -56,   29,   88,  999]]
 
-# assert studentAnswer == answer
+assert studentAnswer == answer
 
 #-----------------------------------------------------------------------
 
@@ -90,13 +111,18 @@ data = [[ 999,     7,    0,   23, -999],
         [-999,    34,  -43,  -88,  999]]
 
 # Write code here
+total = 0
+for r in range(len(data)):
+  for c in range(len(data[r])):
+    if r != c:
+      total += data[r][c]
 
 # Store your final 2-D list in `studentAnswer` for the assert below
-studentAnswer = None
+studentAnswer = total
 
 answer = -3915
 
-#assert studentAnswer == answer
+assert studentAnswer == answer
 
 #-----------------------------------------------------------------------
 
