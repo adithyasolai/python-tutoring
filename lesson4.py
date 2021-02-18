@@ -126,7 +126,7 @@ irs_data = [["Jack", 5600, "757-00-1294", "07-07-2002"],
 # A Possible Solution
 irs_data_dict = {}
 for row in irs_data:
-  irs_data_dict[row[0]] = row[1:]
+  irs_data_dict[row[2]] = row[0:2] + [row[3]]
 
 
 '''

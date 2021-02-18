@@ -6,14 +6,24 @@ Copyright © 2021 Adithya Solai. All rights are reserved.
 You cannot use, modify, or redistribute this code without 
 explicit permission from Adithya Solai.
 '''
-
 ## Problem 1 ##
 # Find the most frequent character in a given string
 # (Hint: Use dictionaries to keep track of character frequencies)
 # In the case of a tie, it doesn't matter which character you return.
 
 def mostFrequentChar(s):
-  return 0
+  charFreq = {}
+
+  for c in s:
+    charFreq[c] = charFreq.get(c, 0) + 1
+
+  mostFreqChar = None
+  mostFreq = 0
+  for c in charFreq.keys():
+    if charFreq[c] > mostFreq:
+      mostFreqChar = c
+      mostFreq = charFreq[c]
+  return mostFreqChar
 
 assert mostFrequentChar("ababcbacadefegdehijhklij") == 'a'
 assert mostFrequentChar("yyqakaaeiflcwyyyqspaqy") == 'y'
@@ -27,7 +37,16 @@ assert mostFrequentChar("wvvw") in ['w', 'v']
 # of each character. Look at the test cases for examples.
 
 def isAnagram(s1, s2):
-  return 0
+  charFreq1 = {}
+  charFreq2 = {}
+
+  for c in s1:
+    charFreq1[c] = charFreq1.get(c, 0) + 1
+
+  for c in s2:
+    charFreq2[c] = charFreq2.get(c, 0) + 1
+
+  return charFreq1 == charFreq2
 
 assert isAnagram("aalss", "salsa") == True
 assert isAnagram("laap", "pal") == False
@@ -103,7 +122,41 @@ print("All Normal Exercises Completed with all Test Cases passed!")
 # group only has 2 partitions, so the second grouping is correct.
 
 def partitionString(s):
-  return 0
+  char_freq = {}
+  
+  for c in s:
+      char_freq[c] = char_freq.get(c, 0) + 1
+      
+  partitions = []
+  curr_partition = ""
+  seen = {}
+  
+  for c in s:
+    # increment size of curr partition
+    curr_partition += c
+    
+    if c in seen.keys():
+      # decrement c freq in seen
+      seen[c] = seen[c] - 1
+    else:
+      # add c to seen
+      # subtract by 1 bc we just saw it also
+      # (no need to alter `char_freq` since we will only
+      # ever work with any unique character once due to how
+      # the partitions are defined)
+      seen[c] = char_freq[c] - 1
+        
+        
+    if seen[c] == 0:
+      del seen[c]
+            
+    # If all seen requirements are met, then
+    # this can be made a new partition
+    if seen == {}:
+      partitions.append(curr_partition)
+      curr_partition = ""
+          
+  return partitions
 
 assert partitionString("ababcbacadefegdehijhklij") == ["ababcbaca", "defegde", "hijhklij"]
 assert partitionString("abcdefgghijh") == ["a", "b", "c", "d","e", "f", "gg", "hijh"]
