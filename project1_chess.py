@@ -1,4 +1,13 @@
 '''
+Project 1: Chess
+Written by Adithya Solai
+
+Copyright © 2021 Adithya Solai. All rights are reserved.
+You cannot use, modify, or redistribute this code without 
+explicit permission from Adithya Solai.
+'''
+
+'''
 In this project, students will model a chess board and chess piece movements using Python. 
 This will require using all of the concepts learned in Lessons 1-3. Students are
 recommended to use a 2-D list to model the chess board, and functions to organize the logic for
