@@ -146,7 +146,6 @@ def partitionString(s):
       # the partitions are defined)
       seen[c] = char_freq[c] - 1
         
-        
     if seen[c] == 0:
       del seen[c]
             
