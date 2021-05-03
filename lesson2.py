@@ -163,7 +163,7 @@ for i in range(len(lst)):
     
 print(lst)
 
-############ enumerate ############
+############ enumerate() ############
 # need to understand tuples first
 
 # kind of like coordinates

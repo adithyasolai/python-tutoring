@@ -82,7 +82,7 @@ Dictionaries
 -Basically a set of key-value pairs
 -Keys can be any "hashable" data type
 -Keys must be unique
--Keys are basically a set
+-Collection of all Keys is basically a set (since all keys must be unique)
 -Use keys to access the values they are associated with
 -Values can be anything (can be duplicates, don't need to be hashable)
 '''
@@ -134,7 +134,7 @@ Classes
 -Object-Oriented Programming
 -Abstraction
 -Cleaner way to store data together, and modify as you go along
--Cleaner way to hand bandles of data over to many different functions/processes
+-Cleaner way to hand bundles of data over to many different functions/processes
 '''
 
 # Ex: A better way to store our irs data from before:
