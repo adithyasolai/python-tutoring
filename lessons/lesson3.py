@@ -25,7 +25,7 @@ Same operations as 1-D Lists:
 # Ex: 2-D List with info about students
 # Column 0 (leftmost): Name (a `str`)
 # Column 1: Age (an `int`)
-# Column 2: Graduatinng (a `bool`)
+# Column 2: Graduating (a `bool`)
 
 # Initialize
 students = [["Arjun", 16, True],

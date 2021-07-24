@@ -358,8 +358,6 @@ print(product)
 def sumUpFromOne(num):
   return 0
 
-# Need Test Cases
-
 # A Possible Answer
 def sumUpFromOne(num):
   total = 0
@@ -368,3 +366,9 @@ def sumUpFromOne(num):
     total = total + n
 
   return total
+
+  t = 1
+  for x in range(1,26):
+    t *= x
+
+  print(t)
