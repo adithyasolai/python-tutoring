@@ -58,7 +58,7 @@ assert findFirstOdd([9, 13, 70, 5]) == 0
 
 #-----------------------------------------------------------------------
 
-## Problem 3 ##
+## Problem 4 ##
 # Given a string and a list, return True if the list contains the string.
 # (Note: Not every element in the list is guaranteed to be a str. 
 #  Use isinstance() to check the data type of each element.)
