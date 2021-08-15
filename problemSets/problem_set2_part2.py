@@ -27,24 +27,6 @@ assert findFactors(1, [10,70,23,4]) == [True, True, True, True]
 #-----------------------------------------------------------------------
 
 ## Problem 2 ##
-# Given a list of integers, return the second-smallest integer.
-# Ex: If lst=[6, 12, 1, 13], then return 6. 1 is the smallest, 6 is the second-smallest.
-# 
-# Ex 2: If lst=[-9, 0, 21, -3], then return -3. -9 is the smallest, -3 is the second-smallest.
-#
-# You can assume the list will only contain integers.
-# You can assume the list will contain at least one integer.
-def findSecondSmallest(lst):
-  return 0
-
-# Test Cases
-assert findSecondSmallest([6, 12, 1, 13]) == 6
-assert findSecondSmallest([-9, 0, 21, -3]) == -3
-assert findSecondSmallest([-4]) == -4
-
-#-----------------------------------------------------------------------
-
-## Problem 3 ##
 # Given a list of integers, return the index of the first odd number in the list.
 # If the list has no odd numbers, return -1.
 # You can assume the list only has positive integers.
@@ -58,7 +40,7 @@ assert findFirstOdd([9, 13, 70, 5]) == 0
 
 #-----------------------------------------------------------------------
 
-## Problem 4 ##
+## Problem 3 ##
 # Given a string and a list, return True if the list contains the string.
 # (Note: Not every element in the list is guaranteed to be a str. 
 #  Use isinstance() to check the data type of each element.)

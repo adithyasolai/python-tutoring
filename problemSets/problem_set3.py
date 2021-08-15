@@ -9,6 +9,8 @@ explicit permission from Adithya Solai.
 
 ## Problem 1 ##
 # Insert a column in the middle of the data set below with all 0s
+# Hint: Use Python's built-in insert() function for lists. (Google this if you don't know it.)
+# You must use a for loop!
 data = [[  1,   7, 23,  43],
         [ 90,  -6, 23, -56],
         [-99, -73, 69,  29],
@@ -33,7 +35,7 @@ assert studentAnswer == answer
 # Change all integers on the minor diagonal (top right to bottom left) to -999
 # (Make the intersection of the diagonals at the center equal to 1000)
 # (See the `answer` 2-D list below for more clarity)
-# (Hint: Use Python's built-in insert() function for lists)
+# You must use a for loop!
 
 data = [[ 1,     7,   0,  23,  43],
         [ 90,   -6,   0,  23, -56],

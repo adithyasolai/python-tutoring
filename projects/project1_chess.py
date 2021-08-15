@@ -66,4 +66,13 @@ Add functionality for allowing users to move pieces that are already placed on t
 You can decide how you want the user to format their input to indicate that they are moving an existing
 piece instead of placing a new one. You can assume that the user will always follow your format.
 
+Hint: It might be easier to ask for the Color, Piece Type, and Square of the piece that users would like
+to add to the board in three separate user input prompts (meaning use the input() function 3 times).
+
+Hint: If you want to get all the user input (Color, Piece Type, Square) with just one input() function call,
+consider storing that user input in a string, using Python's built-in split() function on that string, 
+and using the list of 3 elements that the split() function returns to extract the color, piece type, and square.
+The split() function will return a list with this format: [Color, Piece Type, Square].
+Google "Python split()" for more info.
+
 '''
