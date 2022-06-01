@@ -1,10 +1,6 @@
 '''
 Problem Set 2 Part 2
 Written by Adithya Solai
-
-Copyright © 2021 Adithya Solai. All rights are reserved.
-You cannot use, modify, or redistribute this code without 
-explicit permission from Adithya Solai.
 '''
 
 ## Problem 1 ##
