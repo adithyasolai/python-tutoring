@@ -77,14 +77,7 @@ print(x // y)
 # **
 # %
 
-# Answers
-# / is float divide (it keeps decimal remainders)
-# the result of using / is always a float
-print(3/2)
-
-# // is integer divide (it chops off decimal remainders)
-# the result of using // is always an int
-print(3//2)
+# Answers in lesson1_answers.py
 
 '''
 Functions
@@ -118,9 +111,7 @@ print(celsiusToFahren(0)) # Should be 32 deg Fahren
 print(celsiusToFahren(37)) # Should be 98.6 deg Fahren
 print(celsiusToFahren(-20)) # Should be -4 deg Fahren
 
-# A Possible Answer
-def celsiusToFahren(c):
-  return (c * (9/5)) + 32
+# Answers in lesson1_answers.py
 
 ############ Exercise!! ############
 # Write a function for the Weighted Average Cost of Capital
@@ -138,9 +129,7 @@ def WACC(pctEquity, cEquity, pctDebt, cDebt, corpTaxRate):
 print(WACC(0.5, 500, 0.5, 500, 0.25)) # Should be 437.5
 print(WACC(0.9, 10000, 0.1, 5000, 0.2)) # Should be 9400
 
-# A Possible Answer
-def WACC(pctEquity, cEquity, pctDebt, cDebt, corpTaxRate):
-  return (pctEquity * cEquity) + (pctDebt * cDebt * (1 - corpTaxRate))
+# Answers in lesson1_answers.py
 
 '''
 if, else-if, else statements
@@ -203,9 +192,9 @@ def canDrive(age, hasPermit):
     return False
 
 # Test Cases
-print(canDrive(16, True))
-print(canDrive(16, False))
-print(canDrive(21, False))
+print(canDrive(16, True)) # True, permit criteria met
+print(canDrive(16, False)) # False, neither criteria met
+print(canDrive(21, False)) # True, age criteria met
 
 ############ Exercise!! ############
 # Write a function that returns True if P/E ratio > 10 OR Market Cap > 10000
@@ -214,18 +203,13 @@ def isOverValued(pe, market_cap):
   # market cap is an int
   return 0
 
-# A Possible Answer
-def isOverValued(pe, market_cap):
-  if pe > 10 or market_cap > 10000:
-    return True
-  else:
-    return False
-
 # Test Cases
 print(isOverValued(15, 15000)) # True. PE & Market Cap Conditions Met
 print(isOverValued(10, 15000)) # True. Only Market Cap Condition Met
 print(isOverValued(15, 10000)) # True. Only PE Ratio Condition Met
 print(isOverValued(3, 5000)) # False. No Conditions Met
+
+# Answers in lesson1_answers.py
 
 ############ Parentheses ############
 # Allows for more complex if-else conditionals
@@ -243,10 +227,13 @@ def loanEligible(downpayment, age, parent):
   else:
     return False
 
-# Need test cases
-print(loanEligible(8000, 17, True)) # True
-print(loanEligible(8000, 17, False)) # False
-
+# Test Cases
+print(loanEligible(8000, 25, True)) # True, all criteria met
+print(loanEligible(8000, 17, True)) # True, enough criteria met
+print(loanEligible(8000, 21, False)) # True, enough criteria met
+print(loanEligible(8000, 17, False)) # False, neither `or` criteria met
+print(loanEligible(500, 28, True)) # False, down payment criteria not met
+print(loanEligible(500, 15, False)) # False, no criteria is met
 
 ############ Exercise!! ############
 # Write a function to determine if someone should get a special
@@ -258,15 +245,14 @@ def specialCreditCard(member, networth, debt):
   # networth & debt are integers
   return 0
 
-# A Possible Answer
-def specialCreditCard(member, networth, debt):
-  if member == True or (networth >= 100000 and debt == 0):
-    return True
-  else:
-    return False
+# Test Cases
+print(specialCreditCard(True, 300000, 0)) # True, all criteria met
+print(specialCreditCard(True, 90000, 1000)) # True, already customer of bank
+print(specialCreditCard(False, 500000, 0)) # True, non-customer criteria met
+print(specialCreditCard(False, 200000, 100)) # False, non-customer criteria not met
+print(specialCreditCard(False, 90000, 0)) # False, non-customer criteria not met
 
-# Need test cases
-print(specialCreditCard(False, 90000, 0)) # False
+# Answers in lesson1_answers.py
 
 ############ else-if ############
 # Allows for even more control of logical flow in code.
@@ -288,8 +274,6 @@ def examGrade(grade):
     return "D"
   else:
     return "F"
-
-# Need test cases
 
 # (You can practice using else-if in Problem #8 of Problem Set 1.)
 
@@ -336,17 +320,8 @@ print(product)
 def sumUpFromOne(num):
   return 0
 
-# A Possible Answer
-def sumUpFromOne(num):
-  total = 0
-  # explain why to use `n` instead of `num`
-  for n in range(1, num+1):
-    total = total + n
+# Test Cases
+print(sumUpFromOne(10)) # 55
+print(sumUpFromOne(150)) # 11325
 
-  return total
-
-  t = 1
-  for x in range(1,26):
-    t *= x
-
-  print(t)
+# Answers in lesson1_answers.py
