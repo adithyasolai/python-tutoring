@@ -2,7 +2,7 @@
 # need to understand tuples first
 
 # kind of like coordinates
-t = (4,5)
+t = (4, 5)
 
 # can use same indexing as lists
 print(t[0])
@@ -20,14 +20,14 @@ print(type(t2))
 print(t2)
 
 # also need to understand enumerate() first
-lst = [10,20,30,40,50]
+lst = [10, 20, 30, 40, 50]
 print(enumerate(lst))
 
 # iterating through lists with enumerate() is very elegant
 # we can modify the list using idx
 # or just iterate like a for-each loop using val
 for idx, val in enumerate(lst):
-    print('index: ' + str(idx)) # str() tries to convert input to a string
+    print('index: ' + str(idx))  # str() tries to convert input to a string
     print('curr value: ' + str(lst[idx]))
     print('curr value: ' + str(val))
     print()

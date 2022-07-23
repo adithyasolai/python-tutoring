@@ -8,28 +8,32 @@ Written by Adithya Solai
 # (Hint: Use dictionaries to keep track of character frequencies)
 # In the case of a tie, it doesn't matter which character you return.
 
+
 def mostFrequentChar(s):
-  return 0
+    return 0
+
 
 assert mostFrequentChar("ababcbacadefegdehijhklij") == 'a'
 assert mostFrequentChar("yyqakaaeiflcwyyyqspaqy") == 'y'
 assert mostFrequentChar("wvvw") in ['w', 'v']
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 ## Problem 2 ##
 # Determine if two strings are anagrams using dictionaries.
 # Anagrams are two strings that use the same characters and same frequency
 # of each character. Look at the test cases for examples.
 
+
 def isAnagram(s1, s2):
-  return 0
+    return 0
 
-assert isAnagram("aalss", "salsa") == True
+
+assert isAnagram("aalss", "salsa")
 assert isAnagram("laap", "pal") == False
-assert isAnagram("listen", "silent") == True
+assert isAnagram("listen", "silent")
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 ## Problem 3 ##
 # Design a Pokedex class that stores data about Pokemon.
@@ -52,9 +56,10 @@ assert isAnagram("listen", "silent") == True
 # Since there are different ways to implement this, testing will be done manually
 # by the instructor.
 
+
 class Pokedex():
-  def __init__(self):
-    return 0
+    def __init__(self):
+        return 0
 
 # Data format: [Pokedex ID, Name, # of Moves, Evolutions, Pre-volutions]
 # Add this data to the Pokedex:
@@ -70,13 +75,15 @@ class Pokedex():
 # 2. Remove Charizard (ID 6) from the database
 # 3. Repeat step 1, Charizard should be gone.
 # 4. Print Pachirisu's (ID 417) # of moves, change it to something else, and print again to check
-# 5. Print the names of Noctowl's (ID 163) pre-volutions (should be just Hoothoot)
+# 5. Print the names of Noctowl's (ID 163) pre-volutions (should be just
+# Hoothoot)
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
+
 
 print("All Normal Exercises Completed with all Test Cases passed!")
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 ## Challenge Problem 1 ##
 # Given a string of characters, figure out the maximum number of partitions
@@ -98,13 +105,17 @@ print("All Normal Exercises Completed with all Test Cases passed!")
 # being in one partition. However, the second group has 3 partitions, and the first
 # group only has 2 partitions, so the second grouping is correct.
 
-def partitionString(s):
-  return 0
 
-assert partitionString("ababcbacadefegdehijhklij") == ["ababcbaca", "defegde", "hijhklij"]
-assert partitionString("abcdefgghijh") == ["a", "b", "c", "d","e", "f", "gg", "hijh"]
+def partitionString(s):
+    return 0
+
+
+assert partitionString("ababcbacadefegdehijhklij") == [
+    "ababcbaca", "defegde", "hijhklij"]
+assert partitionString("abcdefgghijh") == [
+    "a", "b", "c", "d", "e", "f", "gg", "hijh"]
 assert partitionString("wwfv") == ["ww", "f", "v"]
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 print("All Challenge Exercises Completed with all Test Cases passed!")

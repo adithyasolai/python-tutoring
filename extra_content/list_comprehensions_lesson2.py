@@ -27,11 +27,12 @@ print(evens)
 print(odds)
 
 # Can also incorporate if-else with some awkward syntax
-is_even = [(val, True) if val % 2 == 0 else (val, False) for val in range(1,11,1)]
+is_even = [(val, True) if val % 2 == 0 else (val, False)
+           for val in range(1, 11, 1)]
 print(is_even)
 
 # More elegant way to do this:
-is_even = [(val, val % 2 == 0) for val in range(1,11,1)]
+is_even = [(val, val % 2 == 0) for val in range(1, 11, 1)]
 print(is_even)
 
 ############ Exercise!! ############
@@ -43,20 +44,23 @@ lst = [5099, 4621, 70, 4999, 7371]
 # Expected answer: [25999801, 21353641, 70, 24990001, 7371]
 
 # A possible answer
+
+
 def isPrime(num):
-  if num <= 1:
-    return False
+    if num <= 1:
+        return False
 
-  num_factors = 0
+    num_factors = 0
 
-  for factor in range(1, num+1):
-    if num % factor == 0: 
-      num_factors += 1
-      
-  if num_factors == 2:
-    return True
-  else:
-    return False
+    for factor in range(1, num + 1):
+        if num % factor == 0:
+            num_factors += 1
+
+    if num_factors == 2:
+        return True
+    else:
+        return False
+
 
 lst = [val ** 2 if isPrime(val) else val for val in lst]
 print(lst)

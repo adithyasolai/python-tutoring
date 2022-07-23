@@ -44,7 +44,7 @@ print("Molly" in roster)
 
 # Iterate through our roster for a roll call
 for student in roster:
-  print(f"{student}, are you here?")
+    print(f"{student}, are you here?")
 
 # (Note: You can't do roll call in any particular order with sets, you would need lists for that)
 
@@ -68,7 +68,7 @@ preferences = [set(["Strawberry", "Vanilla", "Rocky Road", "Chocolate"]),
 # A Possible Solution:
 common_flavors = preferences[0]
 for friend in preferences:
-  common_flavors = common_flavors.intersection(friend)
+    common_flavors = common_flavors.intersection(friend)
 
 print(common_flavors)
 
@@ -85,8 +85,9 @@ Dictionaries
 
 # Ex: Efficiently store customer info
 # Key: Bank ID (which we know is unique to each customer)
-# Values: A list with the following structure [balance in pennies (int), interest rate (float), start date (string)]
-bank = {} # or bank = dict()
+# Values: A list with the following structure [balance in pennies (int),
+# interest rate (float), start date (string)]
+bank = {}  # or bank = dict()
 
 # Customer w/ ID 1234
 bank[1234] = [6700, 0.01, "4/3/12"]
@@ -97,7 +98,7 @@ bank[7777] = [25000, 0.02, "8/31/16"]
 
 # Iterate through our customers
 for key, value in bank.items():
-  print(f"Customer {key}: {value}")
+    print(f"Customer {key}: {value}")
 
 # Fetch Customer 7777's balance
 print(bank[7777][0])
@@ -122,7 +123,7 @@ irs_data = [["Jack", 5600, "757-00-1294", "07-07-2002"],
 # A Possible Solution
 irs_data_dict = {}
 for row in irs_data:
-  irs_data_dict[row[2]] = row[0:2] + [row[3]]
+    irs_data_dict[row[2]] = row[0:2] + [row[3]]
 
 
 '''
@@ -134,37 +135,45 @@ Classes
 '''
 
 # Ex: A better way to store our irs data from before:
+
+
 class irsPerson:
-  # explicitly stating the argument types doesn't really help here
-  def __init__(self, name: str, ssn: str, dob: str, tax_due: int):
-    self.name = name
-    self.ssn = ssn
-    self.dob = dob
-    self.tax_due = tax_due
+    # explicitly stating the argument types doesn't really help here
+    def __init__(self, name: str, ssn: str, dob: str, tax_due: int):
+        self.name = name
+        self.ssn = ssn
+        self.dob = dob
+        self.tax_due = tax_due
+
 
 class irsDatabase:
-  def __init__(self):
-    self.data = {}
+    def __init__(self):
+        self.data = {}
 
-  # explicitly stating that the `person` arg is an `irsPerson` type is super helpful here
-  # (again, not needed as Python is an interpreted language, but this is good style and helps you code)
-  def addPerson(self, person: irsPerson):
-    self.data[person.ssn] = person
+    # explicitly stating that the `person` arg is an `irsPerson` type is super helpful here
+    # (again, not needed as Python is an interpreted language, but this is good style and helps you code)
+    def addPerson(self, person: irsPerson):
+        self.data[person.ssn] = person
 
-  def getPerson(self, ssn: str):
-    return self.data[ssn]
+    def getPerson(self, ssn: str):
+        return self.data[ssn]
 
-  def isPersonInDatabase(self, ssn: str):
-    return ssn in self.data.keys()
+    def isPersonInDatabase(self, ssn: str):
+        return ssn in self.data.keys()
 
-  def removePerson(self, ssn: str):
-    del self.data[ssn]
+    def removePerson(self, ssn: str):
+        del self.data[ssn]
 
 # That's it! We have a fully-functioning, fast database now
 # Let's use our database
 
+
 # Define Person objects first
-jack = irsPerson(name="Jack", ssn="757-00-1294", dob="07-07-2002", tax_due=5600)
+jack = irsPerson(
+    name="Jack",
+    ssn="757-00-1294",
+    dob="07-07-2002",
+    tax_due=5600)
 # don't need to explicitly write the argument name if you remember the order
 janie = irsPerson("Janie", "997-16-6694", "03-21-1997", 100000)
 lex = irsPerson("Lex", "200-38-6237", "05-17-1990", 2790340)
@@ -210,50 +219,55 @@ Network = dict<IP, User>
 User = (home address, dict<timestamp,[URL, port]>)
 '''
 
+
 class networkUser:
-  # Don't need to define any variables up top here like Java.
-  # You can if you want. Better to just define in the constructor below.
+    # Don't need to define any variables up top here like Java.
+    # You can if you want. Better to just define in the constructor below.
 
-  # The constructor.
-  # All functions in this class need `self` as first parameter
-  # Non-self functions will not be able to access variables global to the class
-  def __init__(self, IP, home_address):
-    self.IP = IP
-    self.home = home_address
-    # A dictionary that will contain lists of activity logs of this network user,
-    # with timestamp as the key, and a list of [URL, port] as the value
-    self.logs = {}
+    # The constructor.
+    # All functions in this class need `self` as first parameter
+    # Non-self functions will not be able to access variables global to the
+    # class
+    def __init__(self, IP, home_address):
+        self.IP = IP
+        self.home = home_address
+        # A dictionary that will contain lists of activity logs of this network user,
+        # with timestamp as the key, and a list of [URL, port] as the value
+        self.logs = {}
 
-  def add_log(self, timestamp, URL, port):
-    self.logs[timestamp] = [URL, port]
+    def add_log(self, timestamp, URL, port):
+        self.logs[timestamp] = [URL, port]
 
-  def get_logs(self):
-    return self.logs
+    def get_logs(self):
+        return self.logs
 
-  def get_logs_by_timestamp(self, timestamp):
-    if timestamp in self.logs.keys():
-      return self.logs[timestamp]
-    else:
-      return None
+    def get_logs_by_timestamp(self, timestamp):
+        if timestamp in self.logs.keys():
+            return self.logs[timestamp]
+        else:
+            return None
 
 # Classes + Dictionaries are super powerful!
+
+
 class network:
-  def __init__(self):
-    # The whole network can now just be represented as a dict with IP address as key,
-    # and a networkUser object as value (which itself is a dict as described above)
-    self.users = {}
+    def __init__(self):
+        # The whole network can now just be represented as a dict with IP address as key,
+        # and a networkUser object as value (which itself is a dict as
+        # described above)
+        self.users = {}
 
-  def add_user(self, IP, home_address):
-    self.users[IP] = networkUser(IP, home_address)
+    def add_user(self, IP, home_address):
+        self.users[IP] = networkUser(IP, home_address)
 
-  def add_log(self, IP, timestamp, URL, port):
-    if IP in self.users.keys():
-      self.users[IP].add_log(timestamp, URL, port)
-    else:
-      return None
+    def add_log(self, IP, timestamp, URL, port):
+        if IP in self.users.keys():
+            self.users[IP].add_log(timestamp, URL, port)
+        else:
+            return None
 
-  def delete_user(self, IP):
-    del self.users[IP]
+    def delete_user(self, IP):
+        del self.users[IP]
 
-  def get_log(self, IP, timestamp):
-    return self.users[IP].get_logs_by_timestamp(timestamp)
+    def get_log(self, IP, timestamp):
+        return self.users[IP].get_logs_by_timestamp(timestamp)

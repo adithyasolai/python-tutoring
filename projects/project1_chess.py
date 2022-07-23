@@ -4,7 +4,7 @@ Written by Adithya Solai
 '''
 
 '''
-In this project, students will model a chess board and chess piece movements using Python. 
+In this project, students will model a chess board and chess piece movements using Python.
 This will require using all of the concepts learned in Lessons 1-3. Students are
 recommended to use a 2-D list to model the chess board, and functions to organize the logic for
 the movement patterns of each type of chess piece (Queen, King, Rook, etc.). However, the
@@ -23,7 +23,7 @@ User input will be received in this format:
 
 Possible Piece Colors: White, Black
 Possible Piece Names: Pawn, Knight, Bishop, Rook, Queen, King
-Possible Squares: E4, G5, A7, etc 
+Possible Squares: E4, G5, A7, etc
 (read how Chess square names work: https://en.wikipedia.org/wiki/Algebraic_notation_(chess) )
 
 Example of User's interaction with the chess program:
@@ -47,7 +47,7 @@ Some more notes:
  count as a move. If the Pawn was Black instead of White, the Rook would not be able to capture
  it, and would only have 7 possible moves.
 -Read up on how Pawns move. They are the weirdest piece:
- -Pawns capture diagonally, but move straight forward. 
+ -Pawns capture diagonally, but move straight forward.
  -Pawns can not be placed on the top-most or bottom-most rows for this program, as that would
   involve promotion in some cases, which is more complex than we need to get.
  -https://en.wikipedia.org/wiki/Pawn_(chess)
@@ -66,7 +66,7 @@ Hint: It might be easier to ask for the Color, Piece Type, and Square of the pie
 to add to the board in three separate user input prompts (meaning use the input() function 3 times).
 
 Hint: If you want to get all the user input (Color, Piece Type, Square) with just one input() function call,
-consider storing that user input in a string, using Python's built-in split() function on that string, 
+consider storing that user input in a string, using Python's built-in split() function on that string,
 and using the list of 3 elements that the split() function returns to extract the color, piece type, and square.
 The split() function will return a list with this format: [Color, Piece Type, Square].
 Google "Python split()" for more info.

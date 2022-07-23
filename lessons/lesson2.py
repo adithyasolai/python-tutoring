@@ -63,26 +63,23 @@ print(x)
 x = x + [-59, 42]
 print(x)
 
-# Must use assignment = 
+# Must use assignment =
 # Concatenate is not "in-place" like append()
 print(x)
 x + [-99, -999]
 print(x)
 
 ############ Exercise!! ############
-lst = [8, 0, -6, 79] # <- the "original" `lst` in the exercises below
+lst = [8, 0, -6, 79]  # <- the "original" `lst` in the exercises below
 
-# What is `lst` after the following code?
-lst.append([1,2,3])
-# Answer: [8, 0, -6, 79, [1, 2, 3]]
+# What is `lst` after the following code?a
+lst.append([1, 2, 3])
 
 # What is `lst` after the following code? (using the original `lst`)
 lst + [1, 2, 3]
-# Answer: [8, 0, -6, 79]
 
 # What is `lst` after the following code? (using the original `lst`)
 lst = lst + [1, 2, 3]
-# Answer: [8, 0, -6, 79, 1, 2, 3]
 
 '''
 for-loops + lists
@@ -95,15 +92,15 @@ for-loops + lists
 ############ range() ############
 # using range() to iterate through a list
 print(x)
-for i in range(len(x)): # len(x) gives length of list x
-    print(i) # range() makes i match perfectly with 0-indexing
-    print(x[i]) # use list indexing to access each element
+for i in range(len(x)):  # len(x) gives length of list x
+    print(i)  # range() makes i match perfectly with 0-indexing
+    print(x[i])  # use list indexing to access each element
     print()
 
 # use start & end parameters to make more complex for loops through lists
-y = list(range(100)) # make a list from 0-99
+y = list(range(100))  # make a list from 0-99
 print(y)
-for i in range(0, len(y), 3): # only iterate through every 3rd element
+for i in range(0, len(y), 3):  # only iterate through every 3rd element
     print(y[i])
 
 ############ for-each loops ############
@@ -113,22 +110,22 @@ for val in x:
     print(val)
 
 # However, we can't modify any elements in our list using for-each loops
-y = [1,2,3,4,5]
+y = [1, 2, 3, 4, 5]
 print(y)
 for num in y:
     num = num + 1
     # changes are reflected locally in this scope
     print(num)
-print(y) # y is unchanged
+print(y)  # y is unchanged
 
 # Easier to modify list using for-loops + range() approach
 print(y)
 for i in range(len(y)):
     y[i] = y[i] + 1
-print(y) # everything incremented by 1!
+print(y)  # everything incremented by 1!
 
 ############ Exercise!! ############
-# Replace every integer in `lst` with the sum 
+# Replace every integer in `lst` with the sum
 # from 1 to that integer
 lst = [1, 7, 100, 5]
 
@@ -147,11 +144,11 @@ for i in range(len(lst)):
     # Use an inner-loop to find the sum of integers
     # from 1 to the current element of lst
     sum_of_elem = 0
-    for j in range(1, lst[i]+1):
+    for j in range(1, lst[i] + 1):
         sum_of_elem += j
 
     lst[i] = sum_of_elem
-    
+
 print(lst)
 
 '''

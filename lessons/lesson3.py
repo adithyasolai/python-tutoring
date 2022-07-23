@@ -24,6 +24,7 @@ Same operations as 1-D Lists:
 # Column 2: Graduating (a `bool`)
 
 # Initialize
+import random
 students = [["Arjun", 16, True],
             ["John", 18, False],
             ["Jane", 17, True]]
@@ -131,7 +132,8 @@ print(cars)
 # Rows in outer loop
 # Columns in inner loop
 
-# Ex: Iterating cars table and appending a 5th column (Price) value to every row
+# Ex: Iterating cars table and appending a 5th column (Price) value to
+# every row
 cars = [["Fiat", "124 Spider", 2017, 35],
         ["Nissan", "2005X", 1996, 26],
         ["BMW", "3 Series", 2015, 33],
@@ -141,7 +143,7 @@ cars = [["Fiat", "124 Spider", 2017, 35],
 
 for r in range(len(cars)):
     cars[r].append(20000)
-        
+
 print(cars)
 
 # Ex: Iterating cars table and printing every string we find in the table
@@ -158,20 +160,23 @@ numbers = [[4, 17, 9, 23],
            [36, 111, 113, 739]]
 
 # Possible Answer:
+
+
 def isPrime(num):
-  if num <= 1:
-    return False
+    if num <= 1:
+        return False
 
-  num_factors = 0
+    num_factors = 0
 
-  for factor in range(1, num+1):
-    if num % factor == 0:
-      num_factors += 1
+    for factor in range(1, num + 1):
+        if num % factor == 0:
+            num_factors += 1
 
-  if num_factors == 2:
-    return True
-  else:
-    return False
+    if num_factors == 2:
+        return True
+    else:
+        return False
+
 
 for r in range(len(numbers)):
     for c in range(len(numbers[0])):
@@ -204,21 +209,27 @@ User Input
 # and this string is displayed to the user.
 
 # Ex: Capture the user's age and tell them if they can legally drink alcohol
+
+
 def drinkingAgeProgram():
-  user_age = input("What is your age?")
-  print("User Age:", user_age)
+    user_age = input("What is your age?")
+    print("User Age:", user_age)
 
-  # MUST CAST input() RETURN VALUE TO THE TYPE YOU EXPECT IT TO BE.
-  # IT IS ALWAYS `str` BY DEFAULT!
-  print(type(user_age))
-  user_age = int(user_age)
+    # MUST CAST input() RETURN VALUE TO THE TYPE YOU EXPECT IT TO BE.
+    # IT IS ALWAYS `str` BY DEFAULT!
+    print(type(user_age))
+    user_age = int(user_age)
 
-  if user_age >= 21:
-      print("You can drink alochol!")
-  else:
-      print("You must wait", 21-user_age, "years before you can drink alcohol!")
+    if user_age >= 21:
+        print("You can drink alochol!")
+    else:
+        print(
+            "You must wait",
+            21 - user_age,
+            "years before you can drink alcohol!")
 
-  return
+    return
+
 
 drinkingAgeProgram()
 
@@ -237,8 +248,8 @@ While Loops
 # Ex: Iterate from 1 to 10
 i = 1
 while i <= 10:
-  print(i)
-  i = i + 1
+    print(i)
+    i = i + 1
 
 # Ex: Iterate through a 2-D List
 numbers = [[4, 17, 9, 23],
@@ -247,11 +258,11 @@ numbers = [[4, 17, 9, 23],
 
 r = 0
 while r < len(numbers):
-  c = 0
-  while c < len(numbers[0]):
-      print(numbers[r][c], isPrime(numbers[r][c]))
-      c = c + 1
-  r = r + 1
+    c = 0
+    while c < len(numbers[0]):
+        print(numbers[r][c], isPrime(numbers[r][c]))
+        c = c + 1
+    r = r + 1
 
 ############ Exercise ############
 # Use a while loop to iterate through the cars data
@@ -267,38 +278,38 @@ cars = [["Fiat", "124 Spider", 2017, 35],
 # Possible Answer
 r = 0
 while r < len(cars):
-  c = 0
-  while c < len(cars[0]):
-    if isinstance(cars[r][c], str):
-        print(cars[r][c])
-    c = c + 1
-  r = r + 1
+    c = 0
+    while c < len(cars[0]):
+        if isinstance(cars[r][c], str):
+            print(cars[r][c])
+        c = c + 1
+    r = r + 1
 
 ############ input() + while-loops ############
 # Using while-loops with input() is very powerful,
 # and something you can't do with for-loops.
 #
 # Ex: Play a game with the user.
-# User guesses a number from 1-10. 
-# We generate a random number from 1-10. 
+# User guesses a number from 1-10.
+# We generate a random number from 1-10.
 #
 # If they match, the user wins that round.
 # Otherwise, they lose that round.
 #
 # User can enter 'STOP' when they want to stop playing.
 
-import random
 
 def guessingGame():
-  playGame=True
-  while playGame == True:
-    user_guess = input("Guess a number from 1 to 10. Type 'STOP' to exit. -->  ")
-    if user_guess != 'STOP':
-      if int(user_guess) == random.randint(1,10):
-          print("You win this round!")
-      else:
-          print("You lose this round!")
-    else:
-        playGame = False
-        print("Thank you for playing!")
-  return
+    playGame = True
+    while playGame:
+        user_guess = input(
+            "Guess a number from 1 to 10. Type 'STOP' to exit. -->  ")
+        if user_guess != 'STOP':
+            if int(user_guess) == random.randint(1, 10):
+                print("You win this round!")
+            else:
+                print("You lose this round!")
+        else:
+            playGame = False
+            print("Thank you for playing!")
+    return

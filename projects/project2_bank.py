@@ -6,7 +6,7 @@ Written by Adithya Solai
 '''
 In this project, students will model a bank system using Python. This project is intended to
 give students an opportunity to architect a more complex system of classes & objects
-than what is done in problem sets and lesson exercises so far. In addition to 
+than what is done in problem sets and lesson exercises so far. In addition to
 classes, students are also encouraged to use dictionaries and sets to store and use
 data efficiently.
 
@@ -23,7 +23,7 @@ Required functionality of this bank model:
 -Opening a new bank account requires a human name, password, and starting balance from the user.
  The unique bank ID should be randomly generated for the new account.
 -In addition to individual user interactions, we also want to be able to get holistic information
- about our bank (if we were the bank owners). Write functions that return the name and balance 
+ about our bank (if we were the bank owners). Write functions that return the name and balance
  of the bank account with the smallest balance. Do the same for the bank account with the highest
  balance. Also, write a function that returns the mean/average balance of the entire bank.
 
@@ -47,40 +47,43 @@ How this project will be assessed:
  more prepared.
 '''
 
+
 class BankAccount:
-  def __init__(self):
-    None
+    def __init__(self):
+        None
+
 
 class Bank:
-  def __init__(self):
-    None
+    def __init__(self):
+        None
 
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # Public Test Case 1: Average use case tests
 #
-# Add a new account with $5,000 starting balance. 
+# Add a new account with $5,000 starting balance.
 # You shouldn't need to provide a unique Bank ID, it should
 # be generated automatically.
 #
 # Deposit $1000 to this account. Check that there is now $6000 in the balance.
 #
-# Withdraw $500 from this account. Check that there is now $5500 in the balance.
+# Withdraw $500 from this account. Check that there is now $5500 in the
+# balance.
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # Public Test Case 2: Nonsense deposit/withdraw tests
 #
-# Add a new account with $5,000 starting balance. 
+# Add a new account with $5,000 starting balance.
 # You shouldn't need to provide a unique Bank ID, it should
 # be generated automatically.
 #
 # Try to deposit -$500 to the account. This should not be allowed
-# 
+#
 # Try to withdraw -$10 from the account. This should not be allowed
 
-#-----------------------------------------------------------------------
+# -----------------------------------------------------------------------
 
 # Public Test Cast 3: Stress Testing
 #
