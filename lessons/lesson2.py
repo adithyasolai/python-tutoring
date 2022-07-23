@@ -72,7 +72,7 @@ print(x)
 ############ Exercise!! ############
 lst = [8, 0, -6, 79]  # <- the "original" `lst` in the exercises below
 
-# What is `lst` after the following code?a
+# What is `lst` after the following code?
 lst.append([1, 2, 3])
 
 # What is `lst` after the following code? (using the original `lst`)
