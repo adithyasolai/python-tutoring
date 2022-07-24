@@ -66,14 +66,7 @@ cars = [["Fiat", "124 Spider", 2017, 35],
 # Retrieve the bottom two rows
 # (BMW & Mitsubishi)
 
-# Possible Answers:
-print(cars[2:])
-print(cars[2:4])
-
-# Retrieve the miles per gallon for the 2nd row (or row 1, or the Nissan row)
-
-# Possible Answers:
-print(cars[1][3])
+# Retrieve the miles per gallon for the 2nd row (also could be called row at index 1, or the Nissan row)
 
 ############ Append ############
 # At the end of the day, a 2D list is still a list.
@@ -113,18 +106,10 @@ cars = [["Fiat", "124 Spider", 2017, 35],
 
 # Add the following Car to the table:
 # Toyota Camry 2009, 27 mpg
-
-# Possible Answers
-cars.append(["Toyota", "Camry", 2009, 27])
+print(cars)
 
 # Add the year 2012 and the mpg 22 to the Honda Odyssey row
 # Do it with appends. Then do it again with concatenation
-
-# Possible Answers
-cars[4].append(2012)
-cars[4].append(22)
-
-# cars[4] += [2012, 27]
 print(cars)
 
 ############ Iterating 2-D Lists w/ For Loops ############
@@ -159,32 +144,8 @@ numbers = [[4, 17, 9, 23],
            [283, 422, 839, 131],
            [36, 111, 113, 739]]
 
-# Possible Answer:
-
-
-def isPrime(num):
-    if num <= 1:
-        return False
-
-    num_factors = 0
-
-    for factor in range(1, num + 1):
-        if num % factor == 0:
-            num_factors += 1
-
-    if num_factors == 2:
-        return True
-    else:
-        return False
-
-
-for r in range(len(numbers)):
-    for c in range(len(numbers[0])):
-        numbers[r][c] = isPrime(numbers[r][c])
-
 # Expected Answer:
 # [[False, True, False, True], [True, False, True, True], [False, False, True, True]]
-
 print(numbers)
 
 ############ Challenge Exercise!! ############
@@ -192,11 +153,6 @@ print(numbers)
 numbers = [[4, 17, 9, 23],
            [283, 422, 839, 131],
            [36, 111, 113, 739]]
-
-# Possible Answer
-numbers = [[isPrime(num) for num in row] for row in numbers]
-print(numbers)
-
 
 '''
 User Input
@@ -266,7 +222,7 @@ while r < len(numbers):
 
 ############ Exercise ############
 # Use a while loop to iterate through the cars data
-# and print everytime we encounter a string.
+# and print every string.
 
 cars = [["Fiat", "124 Spider", 2017, 35],
         ["Nissan", "2005X", 1996, 26],
@@ -274,16 +230,6 @@ cars = [["Fiat", "124 Spider", 2017, 35],
         ["Mitsubishi", "3000GT", 1999, 22],
         ["Honda", "Odyssey", 2012, 22],
         ["Toyota", "Camry", 2009, 27]]
-
-# Possible Answer
-r = 0
-while r < len(cars):
-    c = 0
-    while c < len(cars[0]):
-        if isinstance(cars[r][c], str):
-            print(cars[r][c])
-        c = c + 1
-    r = r + 1
 
 ############ input() + while-loops ############
 # Using while-loops with input() is very powerful,
